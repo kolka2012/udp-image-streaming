@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
     {
     case 'C':
     case 'c':
+    {
         string servAddress = argv[2]; // Second arg: server address
          servPort = Socket::resolveService(argv[3], "udp");
         try {
@@ -92,9 +93,10 @@ int main(int argc, char *argv[])
             cerr << e.what() << endl;
             exit(1);
         }
-        break;
+        break;}
     case 'S':
     case 's':
+    {
         servPort = atoi(argv[2]); // First arg:  local port
         namedWindow("recv", CV_WINDOW_AUTOSIZE);
         try {
@@ -149,6 +151,7 @@ int main(int argc, char *argv[])
             exit(1);
         }
         break;
+    }
     default:
     {// Test for correct parameter
         cerr << "Usage: " << argv[1] << "<[s]-server,[c]-client> [Server Address (for client)] <Server Port>" << endl;
