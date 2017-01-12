@@ -14,8 +14,8 @@ LIBS += "C:/opencv2413/opencv/build/bin/libopencv_highgui2413d.dll"
 LIBS += "C:/opencv2413/opencv/build/bin/libopencv_imgproc2413d.dll"
 LIBS += "C:/opencv2413/opencv/build/bin/libopencv_photo2413d.dll"
 LIBS += "C:/opencv2413/opencv/build/bin/libopencv_contrib2413d.dll"
-#LIBS += "C:/Windows/SysWOW64/ws2_32.dll"
-LIBS += -lws2_32
+LIBS += "C:/Windows/System32/ws2_32.dll"
+#LIBS += -lws2_32
 
 TEMPLATE = app
 
